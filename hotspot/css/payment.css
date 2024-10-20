@@ -1,0 +1,60 @@
+body {
+    animation: backgroundAnimation 10s infinite alternate;
+    background-color: rgb(0, 157, 255);
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full height of the viewport */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Add some padding to the body */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+}
+button{
+
+    z-index: 1;
+    position: relative;
+    margin: auto;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: aqua;
+}
+img {
+    max-width: 50%; /* Set the maximum width to 50% */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px 0 0 25%;
+
+}
+.note img {
+    max-width: 100%; /* Increase size for note image */
+    margin: auto;
+}
+marquee{
+    font-size: 25px;
+    color: white;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+    img {
+        max-width: 100%; /* Increase size for mobile */
+        margin: 10px 0; /* Reduced margin */
+    }
+    .note img {
+        max-width: 100%;
+        margin-top: 10px; /* Reduced margin */
+        height: auto;
+    }
+    button {
+        margin: 10px 0; /* Reduced margin */
+    }
+}
+
+@keyframes backgroundAnimation {
+    0% { background-color: rgb(0, 157, 255); }
+    25% { background-color: rgb(255, 0, 150); }
+    50% { background-color: rgb(0, 255, 150); }
+    75% { background-color: rgb(150, 0, 255); }
+    100% { background-color: rgb(0, 157, 255); }
+}
